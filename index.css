@@ -12,9 +12,12 @@ html, body {
 body {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 body > img {
     border: .1rem solid #fff;
     border-radius: .7rem;
+    margin: .5rem;
 }
