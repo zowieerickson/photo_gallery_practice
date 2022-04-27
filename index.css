@@ -1,3 +1,20 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #2A1A1F;
+    color: white;
+}
+
+* {
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+
 body {
-    background: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > img {
+    border: .1rem solid #fff;
+    border-radius: .7rem;
 }
