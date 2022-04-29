@@ -25,14 +25,12 @@ html, body {
 .my-gallery {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 3rem;
 }
 
 #my-selected-photo {
     margin: 1rem 0 2.5rem;
-    /* display: none; */
 }
 
 @media (min-width: 850px) {
