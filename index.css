@@ -32,5 +32,13 @@ html, body {
 
 #my-selected-photo {
     margin: 1rem 0 2.5rem;
-    display: none;
+    /* display: none; */
+}
+
+@media (min-width: 850px) {
+    .my-gallery {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 10rem;
+    }
 }

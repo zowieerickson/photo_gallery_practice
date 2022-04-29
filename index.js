@@ -15,7 +15,7 @@ function getPhotosHtml(photos) {
 getPhotos().then(photos => {
     document.body.innerHTML = `
     <div class="my-gallery">
-        <img class="my-photo" id="my-selected-photo" src="https://picsum.photos/id/1/200/200" />
+        <img class="my-photo" id="my-selected-photo" src="https://picsum.photos/id/3/200/200" />
         ${getPhotosHtml(photos)}
     </div>`;
     const myPhotoImgs = Array.from(document.querySelectorAll('.my-photo'));
