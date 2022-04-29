@@ -4,15 +4,6 @@ async function getPhotos() {
     return photos
 }
 
-/*    
-       Create a new img and place it, centered, above my-photos
-        -This should be hidden initially
-        -Also give it the my-photo class
-    
-       Create a "click" event for each photo in my-photos
-        -When clicked, load the clicked photo into the new img tag
-*/
-
 function getPhotosHtml(photos) {
     let photosHtml = photos.map(photo => {
         return `<img class="my-photo" src="https://picsum.photos/id/${photo.id}/100/100" alt="${photo.title}" />`
@@ -30,8 +21,15 @@ getPhotos().then(photos => {
     const myPhotoImgs = Array.from(document.querySelectorAll('.my-photo'));
 
     myPhotoImgs.forEach(photoImg => {
+        // Clicking on photo will display it as top image
         photoImg.addEventListener("click", e => {
-            console.log(e.target)
+            let imgSrc = e.target.src.slice(0, -7);
+            // Adjusting the size from 100/100 to 200/200 (height/width) so the image isn't blurred
+            let imgSrcLarge = imgSrc + `200/200`;
+            const selectedPhoto = document.querySelector("#my-selected-photo");
+            selectedPhoto.style.display = 'block';
+            selectedPhoto.src = imgSrcLarge;
+
         })
     })
     console.log(myPhotoImgs)
